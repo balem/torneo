@@ -4,11 +4,6 @@
     Author     : erodriguez
 --%>
 
-<%@page import="py.edu.ucsa.entities.*" %>
-<%@page import="java.util.Iterator"%>
-<%@page import="java.util.List"%>
-<% List<Torneo> lista =  (List<Torneo>) session.getAttribute("torneo");%>
-<% Iterator<Torneo> it = lista.iterator(); %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -18,33 +13,6 @@
     </head>
     <body>
         <h1>Lista de torneos</h1>
-        <table>
-            <thead>
-                <tr>
-                    <td>id</td>
-                    <td>Nombre</td>
-                    <td>cant. equipo</td>
-                    <td>fecha inicio</td>
-                    <td>fecha fin</td>
-                </tr>
-            </thead>
-        
-        <%
-            while(it.hasNext()){
-                    Torneo a = it.next();        
-          %>
-          <tbody>
-              <tr>
-                  <td><%= a.getId() %></td>
-                  <td><%= a.getNombre() %></td>
-                  <td><%= a.getNroEquipos() %></td>
-                  <td><%= a.getFehcaInicio() %></td>
-                  <td><%= a.getFechaFin() %></td>
-              </tr>
-              <%
-                }
-              %>                
-          </tbody>
-        </table>
+        <p><a href="TorneoLista">Listar</a></p>
     </body>
 </html>

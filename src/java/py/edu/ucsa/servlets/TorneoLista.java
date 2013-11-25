@@ -18,6 +18,7 @@ import py.edu.ucsa.entities.dao.DaoFactory;
  *
  * @author erodriguez
  */
+
 public class TorneoLista extends HttpServlet {
 
     /** 
@@ -31,11 +32,11 @@ public class TorneoLista extends HttpServlet {
             throws ServletException, IOException {
         List<Torneo> lista = DaoFactory.getTorneoDao().listTorneo();
         if(lista != null){
-            HttpSession session = request.getSession(false);
+            HttpSession session = request.getSession(true);
             if(session != null){
-                session.setAttribute("lista-torneo", lista);
+                request.setAttribute("torneo", lista);
             }
-            request.getRequestDispatcher("index.jsp").forward(request, response);
+            request.getRequestDispatcher("lista_torneo.jsp").forward(request, response);
         }
         
         

@@ -4,7 +4,7 @@
  */
 package py.edu.ucsa.entities.dao;
 
-import py.edu.ucsa.entities.dao.impl.TorneoDao;
+import py.edu.ucsa.entities.dao.impl.TorneoDaoImpl;
 
 /**
  *
@@ -12,7 +12,7 @@ import py.edu.ucsa.entities.dao.impl.TorneoDao;
  */
 
 public class DaoFactory {
-    public static ITorneo getTorneoDao(){
-        return new TorneoDao();
+    public static TorneoDao getTorneoDao(){
+        return new TorneoDaoImpl();
     }
 }

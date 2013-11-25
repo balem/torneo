@@ -4,12 +4,9 @@
  */
 package py.edu.ucsa.servlets;
 
-import com.sun.xml.internal.bind.v2.runtime.unmarshaller.IntArrayData;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.Date;
 import java.util.List;
-import javax.jms.Session;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;

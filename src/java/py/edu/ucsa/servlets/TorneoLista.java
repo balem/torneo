@@ -33,7 +33,7 @@ public class TorneoLista extends HttpServlet {
             throws ServletException, IOException {
         
 //        Torneo tor = new Torneo();
-//        tor.setId(15);
+//        tor.setId(16);
 //        tor.setAnho(2013);
 //        tor.setFechaFin(new Date());
 //        tor.setFehcaInicio(new Date());

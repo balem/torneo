@@ -31,15 +31,15 @@
         
         <%
             while(it.hasNext()){
-                Torneo a = it.next();        
+                Torneo t = it.next();        
           %>
           <tbody>
               <tr>
-                  <td><%= a.getId() %></td>
-                  <td><%= a.getNombre() %></td>
-                  <td><%= a.getNroEquipos() %></td>
-                  <td><%= a.getFehcaInicio() %></td>
-                  <td><%= a.getFechaFin() %></td>
+                  <td><%= t.getId() %></td>
+                  <td><%= t.getNombre() %></td>
+                  <td><%= t.getNroEquipos() %></td>
+                  <td><%= t.getFehcaInicio() %></td>
+                  <td><%= t.getFechaFin() %></td>
               </tr>
               <%
                 }

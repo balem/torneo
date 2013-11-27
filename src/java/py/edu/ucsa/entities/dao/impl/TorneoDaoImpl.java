@@ -26,6 +26,7 @@ public class TorneoDaoImpl implements TorneoDao {
         em.getTransaction().begin();
         em.persist(torneo);
         em.flush();
+        
         em.getTransaction().commit();
         em.close();
     }
@@ -54,7 +55,8 @@ public class TorneoDaoImpl implements TorneoDao {
     @Override
     public List<Torneo> listTorneo() {
         em.getTransaction().begin();
-        return em.createQuery("select t from Torneo t").getResultList();
+        
+        return em.createQuery("SELECT t FROM Torneo t", Torneo.class).getResultList();
     }
     
 }

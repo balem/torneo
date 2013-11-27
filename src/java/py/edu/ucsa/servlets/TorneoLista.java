@@ -5,6 +5,7 @@
 package py.edu.ucsa.servlets;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -30,6 +31,16 @@ public class TorneoLista extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
+//        Torneo tor = new Torneo();
+//        tor.setId(15);
+//        tor.setAnho(2013);
+//        tor.setFechaFin(new Date());
+//        tor.setFehcaInicio(new Date());
+//        tor.setNombre("Torneito");
+//        tor.setNroEquipos(5);
+//        DaoFactory.getTorneoDao().addTorneo(tor);
+        
         List<Torneo> lista = DaoFactory.getTorneoDao().listTorneo();
         if(lista != null){
             HttpSession session = request.getSession(true);
